@@ -1,1 +1,11 @@
-<div >Examen Práctico #2</div>
+<div class="container-fluid p-4">
+    <div class="row">
+      <div class="col-md-6">
+        <app-ingrediente-list (agregarIngrediente)="onAgregarIngrediente($event)"></app-ingrediente-list>
+      </div>
+  
+      <div class="col-md-6">
+        <app-recipe-calculator [seleccion]="seleccion" (eliminar)="onEliminarIngrediente($event)"></app-recipe-calculator>
+      </div>
+    </div>
+  </div>
