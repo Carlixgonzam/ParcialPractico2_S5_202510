@@ -1,0 +1,19 @@
+<div class="card p-4">
+  <h2>Ingredientes</h2>
+
+  <div *ngFor="let ing of ingredientes" class="card my-3 p-3 border rounded">
+    <div class="d-flex align-items-start gap-3">
+      <img [src]="ing.imagen" alt="{{ing.nombre}}"
+           style="width:64px; height:64px; object-fit:cover; border-radius:6px;">
+      <div style="flex:1">
+        <h5 class="mb-1">{{ ing.nombre }}</h5>
+        <p class="mb-2 text-muted">{{ ing.descripcion }}</p>
+
+        <div class="d-flex align-items-center justify-content-between">
+          <strong>Calorías: {{ ing.calorias }}</strong>
+          <button class="btn btn-success" (click)="agregar(ing)">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
